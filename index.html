@@ -7,22 +7,31 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Link to css file -->
+    <link rel="stylesheet" type ="text/css" href="assets/css/style.css">
 
     <title>Poppy</title>
 
   </head>
   <body>
+    <!-- Main App -->
+  <div class ="container">
+    <!-- Header -->
+      <div class ="row text-center">
+        <div class ="col-12">
+      <h1>Welcome Millie! Your Friend Poppy! Wants to Say Hello!</h1>
+        </div>
+      </div>
+      <!--img and text body  -->
     <div class ="row">
-    <div class ="container">
-    <h1>Welcome Millie! Your Friend Poppy!</h1>
-
-    <div id="changeImg"><button onclick="changePhoto()"><img src ="assets/photo/poppy1.jpg"></button></div>
+      <div class ="col-12">
+      <!-- location of changed html -->
+      <button onclick="changePhoto()" value ="poppy1" id ="poppy1" >
+        <img src ="assets/photo/poppy1.jpg" class ="img-fluid">
+      </button>
+      </div>
     </div>
-    </div>
-
-
-
-
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

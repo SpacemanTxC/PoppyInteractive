@@ -1,62 +1,30 @@
-//
-// let images = new Array();
-//
-// images[0] = new Image();
-// images[0].src = "../photo/poppy1.jpg";
-//
-// images[1] = new Image();
-// images[1].src = "../photo/poppy2.jpg";
-//
-// images[2] = new Image();
-// images[2].src = "../photo/poppy3.jpg";
-//
-//
+// var to store value to check image
+let numCheck = 0;
 
-
+// array stores location of images in dir
 let newPhoto =
   ["../photo/poppy1.jpg", "../photo/poppy2.jpg" , "../photo/poppy3.jpg"];
 
-let photo1Layout = `<button onclick="changePhoto()">
-<img src ="assets/photo/poppy1.jpg"></button>`;
+//var to store the new html that will replace the index page
+let photo1Layout = `<img src ="assets/photo/poppy1.jpg" class ="img-fluid">`;
+let photo2Layout = `<img src ="assets/photo/poppy2.jpg" class ="img-fluid">`;
+let photo3Layout = `<img src ="assets/photo/poppy3.jpg" class ="img-fluid">`;
 
-let photo2Layout = `<button onclick="changePhoto()">
-<img src ="assets/photo/poppy2.jpg"></button>`;
-
-let photo3Layout = `<button onclick="changePhoto()">
-<img src ="assets/photo/poppy3.jpg"></button>`;
-
+// Function to change image
 function changePhoto(){
-    // document.getElementsByClassName('photo').innerHTML =
-    // `<img src = assets/photo/poppy1.jpg>`;
-    console.log("Test Test");
-
-    for(const element of newPhoto){
-        if(element == "../photo/poppy1.jpg"){
-          document.getElementById('changeImg').innerHTML = photo2Layout;
-          break;
-        }else if(element == "../photo/poppy2.jpg"){
-          document.getElementById('changeImg').innerHTML = photo3Layout;
-          break;
-        }else if(element == "../photo/poppy3.jpg"){
-          document.getElementById('changeImg').innerHTML = photo1Layout;
-          break;
-        }else{
-          console.log("TEST Fail");
-        }
+    //check value
+    if(numCheck == 0){
+      //replaces html
+      document.getElementById('poppy1').innerHTML = photo2Layout;
+      //adds to numCheck
+      numCheck++;
+      //Same as above but with 2nd img
+    }else if(numCheck == 1){
+      document.getElementById('poppy1').innerHTML = photo3Layout;
+      numCheck++;
+      //Else statement to end if loop, prints new img, and resets check value
+    }else{
+      document.getElementById('poppy1').innerHTML = photo1Layout;
+      numCheck = 0;
     }
-
-
-
-  // let poppyLink1 = 'assets/photo/poppy1.jpg';
-  // let poppyLink2 = 'assets/photo/poppy2.jpg';
-  // let poppyLink3 = 'assets/photo/poppy3.jpg';
-  //
-  //   for(let i = 0; i <= newPhoto.length; i++){
-  //     document.getElementById("changeImg").innerHTML =
-  //   }
 }
-
-
-
-
-// <button onclick="changePhoto()"><img src ="assets/photo/poppy1.jpg"></button>
