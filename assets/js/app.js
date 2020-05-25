@@ -23,7 +23,7 @@ function changePhoto(){
       document.getElementById('poppy1').innerHTML = photo3Layout;
       numCheck++;
       //Else statement to end if loop, prints new img, and resets check value
-    }else{
+    }else if(numCheck == 2){
       document.getElementById('poppy1').innerHTML = photo1Layout;
       numCheck = 0;
     }
