@@ -1,3 +1,4 @@
+
 // var to store value to check image
 let numCheck = 0;
 
