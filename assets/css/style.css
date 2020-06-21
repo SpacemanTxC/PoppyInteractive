@@ -2,3 +2,9 @@ body{
   color:pink;
   background-color:purple;
 }
+/* center the image */
+.col-12{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
