@@ -16,20 +16,19 @@ let photo4Layout = `<img src ="assets/photo/poppy4.jpg" class ="img-fluid">`;
 function changePhoto(){
     //check value
     if(numCheck == 0){
-      //replaces html
-      document.getElementById('poppy1').innerHTML = photo2Layout;
+      $("#poppySuper").html(photo2Layout);
       //adds to numCheck
       numCheck++;
       //Same as above but with 2nd img
     }else if(numCheck == 1){
-      document.getElementById('poppy1').innerHTML = photo3Layout;
+      $("#poppySuper").html(photo3Layout);
       numCheck++;
       //Else statement to end if loop, prints new img, and resets check value
     }else if(numCheck == 2){
-      document.getElementById('poppy1').innerHTML = photo4Layout;
+      $("#poppySuper").html(photo4Layout);
       numCheck++;
-    }else {
-      document.getElementById('poppy1').innerHTML = photo1Layout;
-      numCheck = 0;
+    }else if(numCheck == 3){
+        $("#poppySuper").html(photo1Layout);
+        numCheck = 0;
     }
 }
